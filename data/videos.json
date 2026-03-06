@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "player_id": 1,
+    "raw_video": "virat_kohli_batting_1.mp4",
+    "silhouette_video": "virat_kohli_batting_1_silhouette.mp4"
+  },
+  {
+    "id": 2,
+    "player_id": 1,
+    "raw_video": "virat_kohli_batting_2.mp4",
+    "silhouette_video": "virat_kohli_batting_2_silhouette.mp4"
+  },
+  {
+    "id": 3,
+    "player_id": 2,
+    "raw_video": "ms_dhoni_batting_1.mp4",
+    "silhouette_video": "ms_dhoni_batting_1_silhouette.mp4"
+  },
+  {
+    "id": 4,
+    "player_id": 3,
+    "raw_video": "ab_de_villiers_batting_1.mp4",
+    "silhouette_video": "ab_de_villiers_batting_1_silhouette.mp4"
+  },
+  {
+    "id": 5,
+    "player_id": 4,
+    "raw_video": "jasprit_bumrah_bowling_1.mp4",
+    "silhouette_video": "jasprit_bumrah_bowling_1_silhouette.mp4"
+  },
+  {
+    "id": 6,
+    "player_id": 4,
+    "raw_video": "jasprit_bumrah_bowling_2.mp4",
+    "silhouette_video": "jasprit_bumrah_bowling_2_silhouette.mp4"
+  },
+  {
+    "id": 7,
+    "player_id": 5,
+    "raw_video": "rashid_khan_bowling_1.mp4",
+    "silhouette_video": "rashid_khan_bowling_1_silhouette.mp4"
+  }
+]

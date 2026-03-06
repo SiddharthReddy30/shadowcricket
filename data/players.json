@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Virat Kohli",
+    "country": "India",
+    "jersey_number": 18,
+    "role": "Middle-Order Batsman",
+    "ipl_team": "Royal Challengers Bengaluru",
+    "is_wicket_keeper": false
+  },
+  {
+    "id": 2,
+    "name": "MS Dhoni",
+    "country": "India",
+    "jersey_number": 7,
+    "role": "Finisher",
+    "ipl_team": "Chennai Super Kings",
+    "is_wicket_keeper": true
+  },
+  {
+    "id": 3,
+    "name": "AB de Villiers",
+    "country": "South Africa",
+    "jersey_number": 17,
+    "role": "Middle-Order Batsman",
+    "ipl_team": "Royal Challengers Bengaluru",
+    "is_wicket_keeper": true
+  },
+  {
+    "id": 4,
+    "name": "Jasprit Bumrah",
+    "country": "India",
+    "jersey_number": 93,
+    "role": "Bowler",
+    "ipl_team": "Mumbai Indians",
+    "is_wicket_keeper": false
+  },
+  {
+    "id": 5,
+    "name": "Rashid Khan",
+    "country": "Afghanistan",
+    "jersey_number": 19,
+    "role": "Bowler",
+    "ipl_team": "Gujarat Titans",
+    "is_wicket_keeper": false
+  }
+]
