@@ -8,7 +8,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"math"
+
 	"strings"
 
 	"github.com/siddharthreddy/shadowcricket/internal/player"
@@ -183,12 +183,4 @@ func compareIPLTeam(target, guess string) Color {
 		return Yellow
 	}
 	return White
-}
-
-func compareNumber(target, guess int) int {
-	diff := target - guess
-	if int(math.Abs(float64(diff))) <= 0 {
-		return 0
-	}
-	return diff
 }
