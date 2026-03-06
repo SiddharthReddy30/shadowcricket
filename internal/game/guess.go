@@ -8,17 +8,11 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-
 	"strings"
-
 	"github.com/siddharthreddy/shadowcricket/internal/player"
 )
 
 // --- Token ---
-
-type tokenPayload struct {
-	PlayerID int `json:"pid"`
-}
 
 func CreateToken(playerID int, secret string) (string, error) {
 	block, err := aes.NewCipher([]byte(secret))
@@ -71,47 +65,6 @@ func DecryptToken(token, secret string) (int, error) {
 }
 
 // --- Guess Evaluation ---
-
-type Color string
-
-const (
-	Green  Color = "green"
-	Yellow Color = "yellow"
-	White  Color = "white"
-)
-
-type FieldFeedback struct {
-	Field string `json:"field"`
-	Value string `json:"value"`
-	Color Color  `json:"color"`
-}
-
-type GuessResult struct {
-	Correct  bool            `json:"correct"`
-	Feedback []FieldFeedback `json:"feedback"`
-}
-
-var countryToContinent = map[string]string{
-	"India":        "Asia",
-	"Afghanistan":  "Asia",
-	"Pakistan":     "Asia",
-	"Sri Lanka":    "Asia",
-	"Bangladesh":   "Asia",
-	"Australia":    "Oceania",
-	"New Zealand":  "Oceania",
-	"England":      "Europe",
-	"South Africa": "Africa",
-	"West Indies":  "Americas",
-	"Zimbabwe":     "Africa",
-}
-
-var roleRank = map[string]int{
-	"Opening Batsman":      1,
-	"Middle-Order Batsman": 2,
-	"Finisher":             3,
-	"All-Rounder":          4,
-	"Bowler":               5,
-}
 
 func EvaluateGuess(target, guess player.Player) GuessResult {
 	feedback := []FieldFeedback{
