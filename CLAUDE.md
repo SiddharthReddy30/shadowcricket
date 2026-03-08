@@ -128,6 +128,7 @@ docker-compose -f docker-compose.prod.yml up --build  # prod
 
 ## Key Design Decisions
 
+- Users can only guess players in the database — frontend disables the guess button until a player is selected from autocomplete results, backend validates player_id exists (returns 400 if not found)
 - Random per visit (not daily puzzle)
 - AES-256-GCM encrypted token for round state (server stays stateless)
 - Unlimited guesses, repeats allowed
