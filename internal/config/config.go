@@ -10,6 +10,7 @@ type Config struct {
 	Port        string
 	DataDir     string
 	TokenSecret string
+	Env         string
 }
 
 func Load(envFile string) (Config, error) {
@@ -25,6 +26,11 @@ func Load(envFile string) (Config, error) {
 		dataDir = "data"
 	}
 
+	env := os.Getenv("ENV")
+	if env == "" {
+		env = "development"
+	}
+
 	secret := os.Getenv("TOKEN_SECRET")
 	if len(secret) != 32 {
 		return Config{}, fmt.Errorf("TOKEN_SECRET must be exactly 32 bytes, got %d", len(secret))
@@ -34,5 +40,6 @@ func Load(envFile string) (Config, error) {
 		Port:        port,
 		DataDir:     dataDir,
 		TokenSecret: secret,
+		Env:         env,
 	}, nil
 }

@@ -6,7 +6,7 @@ import (
 	"github.com/siddharthreddy/shadowcricket/internal/player"
 )
 
-func NewRouter(store *player.Store, secret string) http.Handler {
+func NewRouter(store *player.Store, secret string, env string) http.Handler {
 	h := &Handler{store: store, secret: secret}
 
 	mux := http.NewServeMux()
@@ -17,5 +17,11 @@ func NewRouter(store *player.Store, secret string) http.Handler {
 	mux.HandleFunc("POST /api/game/guess", h.guess)
 	mux.HandleFunc("GET /api/players/search", h.search)
 
-	return mux
+	var handler http.Handler = mux
+	if env == "development" {
+		handler = CORS("http://localhost:5173")(handler)
+	}
+	handler = Logging(handler)
+
+	return handler
 }

@@ -24,7 +24,7 @@ func main() {
 		log.Fatalf("data: %v", err)
 	}
 
-	handler := api.NewRouter(store, cfg.TokenSecret)
+	handler := api.NewRouter(store, cfg.TokenSecret, cfg.Env)
 
 	log.Printf("server starting on :%s", cfg.Port)
 	if err := http.ListenAndServe(":"+cfg.Port, handler); err != nil {
